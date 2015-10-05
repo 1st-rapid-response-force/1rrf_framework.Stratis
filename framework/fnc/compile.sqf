@@ -7,6 +7,7 @@
 /////////////////////SERVER\\\\\\\\\\\\\\\\\\\\\
 if (isServer) then {
   rrf_fnc_loadout_serverGetLoadout = compile preprocessFile "framework\fnc\loadout\serverGetLoadout.sqf";
+  rrf_fnc_analytics_analyticEvent = compile preprocessFile "framework\fnc\analytic\analyticEvent.sqf";
 };
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
 

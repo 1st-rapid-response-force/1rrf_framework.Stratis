@@ -16,4 +16,6 @@ _uuid = _this select 0;
 
 hint format ['Server execution of loadout function %1',_uuid];
 
+_analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
+
 // FUSION Code should now execute here
