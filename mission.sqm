@@ -16,7 +16,9 @@ class Mission
 		"task_force_radio_items",
 		"ace_sitting",
 		"ace_explosives",
-		"rhsusf_c_troops"
+		"rhsusf_c_troops",
+		"3DEN",
+		"a3_modules_f_curator_curator"
 	};
 	addOnsAuto[]=
 	{
@@ -33,16 +35,18 @@ class Mission
 		"ace_sitting",
 		"ace_explosives",
 		"rhsusf_c_troops",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"a3_map_stratis"
 	};
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework - 9th Test";
-		startWeather=0.29999998;
+		briefingName="1st RRF - Web Loadout Test";
+		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.29999998;
+		forecastWeather=0;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
@@ -56,7 +60,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=18;
+		items=25;
 		class Item0
 		{
 			side="LOGIC";
@@ -754,6 +758,160 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_officer";
 					player="PLAY CDG";
 					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item18
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2085.6462,6.2173238,5695.6553};
+					id=18;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item19
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2083.2065,6.2039084,5692.5586};
+					id=19;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item20
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2089.6812,6.2525721,5692.6523};
+					id=20;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item21
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2081.0483,6.2143421,5685.8027};
+					id=21;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item22
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2086.7722,6.2452598,5690.2129};
+					id=22;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item23
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2086.5845,6.2547693,5684.6768};
+					id=23;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item24
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2110.0056,6.2600002,5698.5273};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=24;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
 					skill=0.60000002;
 				};
 			};

@@ -7,23 +7,33 @@
 
 	Parameter(s):
   _this:	STRING	- UUID of player who invoked the function call
+	STRING	- Name of player who invoked the function call
 
 	Returns:
 	Nothing
 */
 
 _uuid = _this select 0;
+_name = _this select 1;
 
+//hint format ["%1", _name];
 _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 
-[_uuid] spawn {
+[[_uuid,_name]] spawn {
+
+
         private["_method", "_response", "_params"];
-				_uuid = _this select 0;
+        _perms = _this select 0;
+        _uuid = _perms select 0;
+        _name = _perms select 1;
         _method = "GET_LOADOUT";
         _params = [_uuid];
         _response = [_method, _params] call sock_rpc;
 
 		_case = "SMA_CASE_SMA_MK17" createVehicle getMarkerPos "spawn_test";
+		//Add Actions Name of Player to all boxes/ and Remove
+		[[[_case,_name]],"rrf_fnc_nameLoadoutBox", true] call BIS_fnc_MP;
+    [[_case],"rrf_fnc_removeLoadoutBox", true] call BIS_fnc_MP;
 
 		clearWeaponCargoGlobal _case;
 		clearItemCargoGlobal _case;
@@ -34,16 +44,13 @@ _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 			if ( _itemSlot == "primary"  || _itemSlot == "secondary" || _itemSlot == "launcher" ) then {
 				_case addWeaponCargoGlobal [(_response select _i) select 1, 1];
 			};
-			
+
 			if ( _itemSlot == "uniform" || _itemSlot == "vest" || _itemSlot == "helmet" || _itemSlot == "goggles" || _itemSlot == "nightvision" || _itemSlot == "binoculars" || _itemSlot == "primary_attachments" || _itemSlot == "secondary_attachments" ) then {
 				_case addItemCargoGlobal [(_response select _i) select 1, 1];
 			};
-			
+
 			if ( _itemSlot == "backpack" ) then {
 				_case addBackpackCargoGlobal [(_response select _i) select 1, 1];
 			};
-			
-			
-			
 		};
-    };
+};

@@ -14,7 +14,8 @@
 
 _player = player;
 _uuid = getPlayerUID _player;
-hint format ["Loadout request received, one moment. %1", _uuid];
+_name = name player;
+hint format ["%1, \nMilitary ID Number: %2. \nLoadout request received, one moment.", _name,_uuid];
 
 // Call Function on Server by sending it the neccessary information
-[[_uuid],"rrf_fnc_loadout_serverGetLoadout",false] call BIS_fnc_MP;
+[[_uuid,_name],"rrf_fnc_loadout_serverGetLoadout",false] call BIS_fnc_MP;
