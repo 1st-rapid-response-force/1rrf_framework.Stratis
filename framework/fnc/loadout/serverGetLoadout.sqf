@@ -18,4 +18,26 @@ hint format ['Server execution of loadout function %1',_uuid];
 
 _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 
-// FUSION Code should now execute here
+[] spawn {
+        private["_method", "_response", "_params"];
+        _method = "GET_LOADOUT";
+        _params = [_uuid];
+
+        _response = [_method, _params] call sock_rpc;
+        hint _response;
+
+		_case = "SMA_CASE_SMA_MK17" createVehicle (position player);
+
+		clearWeaponCargo _case;
+		clearItemCargo _case;
+
+		for [{_i=0}, {_i<(count _response)}, {_i=_i+1}] do
+		{
+			_itemSlot = ((_response select _i) select 0);
+			if ( _itemSlot == "primary" ) then {
+				_case addWeaponCargo [(_response select _i) select 1, 1];
+			};
+		};
+
+		_case addAction ["A Useless Action", ""];
+    };

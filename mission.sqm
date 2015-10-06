@@ -38,7 +38,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework";
+		briefingName="1st RRF - Framework - 2nd Test";
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -56,7 +56,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			side="LOGIC";
@@ -721,6 +721,52 @@ class Mission
 					text="arm";
 				};
 			};
+		};
+		class Item16
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2085.053,6.1993093,5697.4961};
+					id=16;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item17
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2094.1526,6.2553816,5697.8882};
+					id=17;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=1;
+		class Item0
+		{
+			position[]={2106.5518,6.2600002,5708.332};
+			name="spawn_test";
+			type="Empty";
 		};
 	};
 };
