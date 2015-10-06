@@ -31,8 +31,19 @@ _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 		for [{_i=0}, {_i<(count _response)}, {_i=_i+1}] do
 		{
 			_itemSlot = ((_response select _i) select 0);
-			if ( _itemSlot == "primary" ) then {
+			if ( _itemSlot == "primary"  || _itemSlot == "secondary" || _itemSlot == "launcher" ) then {
 				_case addWeaponCargoGlobal [(_response select _i) select 1, 1];
 			};
+			
+			if ( _itemSlot == "uniform" || _itemSlot == "vest" || _itemSlot == "helmet" || _itemSlot == "goggles" || _itemSlot == "nightvision" || _itemSlot == "binoculars" || _itemSlot == "primary_attachments" || _itemSlot == "secondary_attachments" ) then {
+				_case addItemCargoGlobal [(_response select _i) select 1, 1];
+			};
+			
+			if ( _itemSlot == "backpack" ) then {
+				_case addBackpackCargoGlobal [(_response select _i) select 1, 1];
+			};
+			
+			
+			
 		};
     };
