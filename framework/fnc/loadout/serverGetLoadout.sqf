@@ -18,15 +18,16 @@ hint format ['Server execution of loadout function %1',_uuid];
 
 _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 
-[] spawn {
+[_uuid] spawn {
         private["_method", "_response", "_params"];
+				_uuid = _this select 0;
         _method = "GET_LOADOUT";
         _params = [_uuid];
 
         _response = [_method, _params] call sock_rpc;
         hint _response;
 
-		_case = "SMA_CASE_SMA_MK17" createVehicle (position player);
+		_case = "SMA_CASE_SMA_MK17" createVehicle getMarkerPos "spawn_test";
 
 		clearWeaponCargo _case;
 		clearItemCargo _case;

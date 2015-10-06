@@ -38,7 +38,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework - 3rd Test";
+		briefingName="1st RRF - Framework - 7th Test";
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -693,7 +693,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2088.8499,6.2218742,5700.8999};
+					position[]={2086.6279,6.1937194,5701.2173};
 					id=14;
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_officer";
@@ -711,7 +711,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2093.1663,6.1121912,5723.5303};
+					position[]={2090.9443,6.0704103,5723.8477};
 					azimut=190;
 					id=15;
 					side="WEST";
@@ -730,7 +730,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2085.053,6.1993093,5697.4961};
+					position[]={2082.8311,6.1630201,5697.8135};
 					id=16;
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_officer";
@@ -748,7 +748,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2094.1526,6.2553816,5697.8882};
+					position[]={2091.9307,6.2539659,5698.2056};
 					id=17;
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_officer";
@@ -764,7 +764,7 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={2106.5518,6.2600002,5708.332};
+			position[]={2102.9114,6.2562199,5712.4233};
 			name="spawn_test";
 			type="Empty";
 		};
