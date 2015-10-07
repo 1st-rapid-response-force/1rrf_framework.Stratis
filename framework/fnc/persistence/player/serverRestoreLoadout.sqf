@@ -14,6 +14,7 @@
 */
 
 _player = _this select 0;
+_playerUUID = getPlayerUID _player;
 _ownerID = _this select 1;
 
 //Fusion Code to Pull and store information
