@@ -4,7 +4,7 @@ respawndelay = "3";
 enableDebugConsole = 1;
 
 loadScreen = "framework\img\load.jpg";
-author = 1st RRF;
+author = 1st Rapid Response Force;
 onLoadName = Framework Base;
 onLoadMission = 1st-rrf.com;
 

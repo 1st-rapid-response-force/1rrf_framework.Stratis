@@ -9,7 +9,9 @@ if (isServer) then {
   rrf_fnc_loadout_serverGetLoadout = compile preprocessFile "framework\fnc\loadout\serverGetLoadout.sqf";
   rrf_fnc_analytics_analyticEvent = compile preprocessFile "framework\fnc\analytic\analyticEvent.sqf";
   rrf_fnc_persistence_player_serverStoreLoadout =  compile preprocessFile 'framework\fnc\persistence\player\serverStoreLoadout.sqf';
+  rrf_fnc_persistence_player_serverStorePosition =  compile preprocessFile 'framework\fnc\persistence\player\serverStorePosition.sqf';
   rrf_fnc_persistence_player_serverRestoreLoadout =  compile preprocessFile 'framework\fnc\persistence\player\serverRestoreLoadout.sqf';
+  rrf_fnc_persistence_player_serverRestorePosition =  compile preprocessFile 'framework\fnc\persistence\player\serverRestorePosition.sqf';
 };
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\

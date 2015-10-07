@@ -4,6 +4,9 @@
 * Version 1.0
 */
 
+//Load Server events
+_h = [] execVM "framework\fnc\serverEvents.sqf";
+
 // Load the SQF Log
 private["_h"];
 _h = [] execVM "framework\lib\log.sqf";

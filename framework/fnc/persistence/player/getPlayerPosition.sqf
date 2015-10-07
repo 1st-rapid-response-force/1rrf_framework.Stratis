@@ -18,4 +18,8 @@ _player = _this select 0;
 _playerName = name _player;
 _playerUUID = getPlayerUID _player;
 _position = position _player;
-_return = [[_playerName,_playerUUID],_position];
+_positionArray = [[_playerName,_playerUUID],_position];
+
+
+// Call Function on Server by sending it the neccessary information
+[[_positionArray],"rrf_fnc_persistence_player_serverStorePosition",false] call BIS_fnc_MP;

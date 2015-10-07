@@ -42,7 +42,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Web Loadout Test";
+		briefingName="1st RRF - Framework Test";
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -925,6 +925,25 @@ class Mission
 			position[]={2102.9114,6.2562199,5712.4233};
 			name="spawn_test";
 			type="Empty";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={2060.7917,5.5739589,5713.2148};
+			a=0;
+			b=0;
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Save Loadout";
+			expActiv="_execute = [player] spawn rrf_fnc_persistence_player_getPlayerLoadout;";
+			class Effects
+			{
+			};
 		};
 	};
 };
