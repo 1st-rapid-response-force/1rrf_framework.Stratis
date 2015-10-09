@@ -697,7 +697,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={2086.6279,6.1937194,5701.2173};
+					position[]={2083.7212,6.1340818,5703.9526};
 					id=14;
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_d_officer";

@@ -11,8 +11,12 @@
 	//Gets ID used for remoteExec
 	_ownerID = owner player;
 
+
 	// Persistence Code - Calls to Server / Server Excutes Actual Functions to Player
-	[player,_ownerID] remoteExecCall ["rrf_fnc_persistence_player_serverRestoreLoadout",2];
-	[player,_ownerID] remoteExecCall ["rrf_fnc_persistence_player_serverRestorePosition",2];
+if (rrfPersistence == 1) then {
+		[player,_ownerID] remoteExecCall ["rrf_fnc_persistence_player_serverRestoreLoadout",2];
+		[player,_ownerID] remoteExecCall ["rrf_fnc_persistence_player_serverRestorePosition",2];
+};
+
 
 };

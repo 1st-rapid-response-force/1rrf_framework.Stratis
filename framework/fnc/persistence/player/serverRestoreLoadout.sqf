@@ -24,5 +24,7 @@ _ownerID = _this select 1;
 if (!isNil "_loadoutArray") then {
     [_player,_loadoutArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID];
 } else {
-	hint "Null Value -> no loadout selected";
+  if (debugEnabled == 1) then {
+      hint "Null Value -> no loadout selected";
+  };
 };

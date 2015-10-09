@@ -15,7 +15,31 @@ class Header
 	maxPlayers = 64;
 };
 
+class Params
+{
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+	class debugEnabled
+	{
+		title = "Debug Enabled";
+		values[] = {1,0};
+		texts[] = {"True","False"};
+		default = 0;
+	};
+	class rrfPersistence
+	{
+		title = "1st RRF - Persistence System";
+		values[] = {1,0};
+		texts[] = {"Enabled","Disabled"};
+		default = 1;
+	};
+	class rrfWebLoadout
+	{
+		title = "1st RRF - Web Loadout System";
+		values[] = {1,0};
+		texts[] = {"Enabled","Disabled"};
+		default = 1;
+	};
+};
 
 #include "framework\sounds\sounds.hpp"
-#include "framework\def\param.hpp"
 #include "framework\def\functions.hpp"

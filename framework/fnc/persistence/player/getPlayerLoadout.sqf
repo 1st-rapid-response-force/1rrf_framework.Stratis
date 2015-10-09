@@ -37,7 +37,11 @@ _player = _this select 0;
 _playerName = name _player;
 _playerUUID = getPlayerUID _player;
 
-hint format["%1 %2",_player,_playerUUID];
+if (debugEnabled == 1) then {
+    hint format["%1 %2",_player,_playerUUID];
+};
+
+
 
 // Call all relevant information functions for loadout
 //Weapons

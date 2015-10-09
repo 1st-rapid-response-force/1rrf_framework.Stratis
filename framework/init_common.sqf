@@ -5,4 +5,7 @@
 */
 
 // Set up Loadouts
-_arm = [arm] call rrf_fnc_loadout_setupArmory;
+
+if (rrfWebLoadout == 1) then {
+    _arm = [arm] call rrf_fnc_loadout_setupArmory;
+};

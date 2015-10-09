@@ -24,5 +24,7 @@ _ownerID = _this select 1;
 if (!isNil "_positionArray") then {
     [_player,_positionArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerPosition",_ownerID];
 } else {
-	hint "Null Value -> no position";
+  if (debugEnabled == 1) then {
+      hint "Null Value -> no position saved";
+  };
 };
