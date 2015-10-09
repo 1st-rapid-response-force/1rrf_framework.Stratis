@@ -42,7 +42,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework Test";
+		briefingName="1st RRF - Framework Test 2";
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -719,7 +719,7 @@ class Mission
 					azimut=190;
 					id=15;
 					side="WEST";
-					vehicle="rhsusf_usmc_marpat_d_officer";
+					vehicle="rhsusf_army_ocp_officer";
 					leader=1;
 					skill=0.60000002;
 					text="arm";

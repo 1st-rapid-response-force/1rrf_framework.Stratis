@@ -12,8 +12,7 @@
 	Nothing
 */
 if (isDedicated) exitWith {};
-_perms = _this select 0;
-_case = _perms select 0;
-_name = _perms select 1;
+_case = _this select 0;
+_name = _this select 1;
 
 _case addAction [_name,{hint format ["This Box Belongs to %1",_this select 3 select 0];},[_name]];

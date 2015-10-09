@@ -22,4 +22,4 @@ _positionArray = [[_playerName,_playerUUID],_position];
 
 
 // Call Function on Server by sending it the neccessary information
-[[_positionArray],"rrf_fnc_persistence_player_serverStorePosition",false] call BIS_fnc_MP;
+[_positionArray] remoteExecCall ["rrf_fnc_persistence_player_serverStorePosition", 2];

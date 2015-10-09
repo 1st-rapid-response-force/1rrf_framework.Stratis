@@ -22,7 +22,7 @@ _ownerID = _this select 1;
 
 //Fusion will need to return this null for no value found
 if (!isNil "_positionArray") then {
-    [[_player,_positionArray],"rrf_fnc_persistence_player_restorePlayerPosition",_ownerID] call BIS_fnc_MP;
+    [_player,_positionArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerPosition",_ownerID];
 } else {
 	hint "Null Value -> no position";
 };

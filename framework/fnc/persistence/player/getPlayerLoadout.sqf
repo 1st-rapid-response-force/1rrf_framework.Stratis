@@ -102,4 +102,4 @@ _playerLoadout = [[_playerName,_playerUUID],
 ];
 
 // Call Function on Server by sending it the neccessary information
-[[_playerLoadout],"rrf_fnc_persistence_player_serverStoreLoadout",false] call BIS_fnc_MP;
+[_playerLoadout] remoteExecCall ["rrf_fnc_persistence_player_serverStoreLoadout", 2];

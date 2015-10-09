@@ -22,7 +22,7 @@ _ownerID = _this select 1;
 
 //Fusion will need to return a null for no value found
 if (!isNil "_loadoutArray") then {
-    [[_player,_loadoutArray],"rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID] call BIS_fnc_MP;
+    [_player,_loadoutArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID];
 } else {
 	hint "Null Value -> no loadout selected";
 };

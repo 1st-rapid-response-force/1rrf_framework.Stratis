@@ -31,9 +31,10 @@ _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
         _response = [_method, _params] call sock_rpc;
 
 		_case = "SMA_CASE_SMA_MK17" createVehicle getMarkerPos "spawn_test";
+    
 		//Add Actions Name of Player to all boxes/ and Remove
-		[[[_case,_name]],"rrf_fnc_loadout_nameLoadoutBox", true] call BIS_fnc_MP;
-    [[_case],"rrf_fnc_loadout_removeLoadoutBox", true] call BIS_fnc_MP;
+    [_case,_name] remoteExecCall ["rrf_fnc_loadout_nameLoadoutBox",0,true];
+    [_case] remoteExecCall ["rrf_fnc_loadout_removeLoadoutBox",0,true];
 
 		clearWeaponCargoGlobal _case;
 		clearItemCargoGlobal _case;
