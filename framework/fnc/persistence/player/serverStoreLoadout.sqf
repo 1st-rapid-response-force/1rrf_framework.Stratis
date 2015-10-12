@@ -12,16 +12,18 @@
 	Returns: Nothing
 */
 
-_loadout = _this select 0;
+_uuid = _this select 0
+_loadout = _this select 1;
 
-[[_loadout]] spawn {
+[[_uuid, _loadout]] spawn {
 
         private["_method", "_response", "_params"];
         _perms = _this select 0;
-        _loadout = _perms select 0;
+        _uuid = _perms select 0
+        _loadout = _perms select 1;
 
         _method = "SAVE_PLAYER_INVENTORY";
-        _params = [_loadout];
+        _params = [_uuid, _loadout];
         _response = [_method, _params] call sock_rpc;
 
 };
