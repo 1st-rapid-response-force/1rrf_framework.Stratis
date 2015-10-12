@@ -19,7 +19,7 @@ _loadout = _this select 1;
 
         private["_method", "_response", "_params"];
         _perms = _this select 0;
-        _uuid = _perms select 0
+        _uuid = _perms select 0;
         _loadout = _perms select 1;
 
         _method = "SAVE_PLAYER_INVENTORY";
