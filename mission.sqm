@@ -929,10 +929,25 @@ class Mission
 	};
 	class Sensors
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			position[]={2060.7917,5.5739589,5713.2148};
+			a=0;
+			b=0;
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Save Loadout";
+			expActiv="_execute = [player] spawn rrf_fnc_persistence_player_getPlayerLoadout;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={2060.7917,5.5779176,5708.6172};
 			a=0;
 			b=0;
 			activationBy="ALPHA";

@@ -31,7 +31,7 @@ _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
         _response = [_method, _params] call sock_rpc;
 
 		_case = "SMA_CASE_SMA_MK17" createVehicle getMarkerPos "spawn_test";
-    
+
 		//Add Actions Name of Player to all boxes/ and Remove
     [_case,_name] remoteExecCall ["rrf_fnc_loadout_nameLoadoutBox",0,true];
     [_case] remoteExecCall ["rrf_fnc_loadout_removeLoadoutBox",0,true];
@@ -46,7 +46,7 @@ _analystics = ["Loadout Accessed",_uuid] spawn rrf_fnc_analytics_analyticEvent;
 				_case addWeaponCargoGlobal [(_response select _i) select 1, 1];
 			};
 
-			if ( _itemSlot == "uniform" || _itemSlot == "vest" || _itemSlot == "helmet" || _itemSlot == "goggles" || _itemSlot == "nightvision" || _itemSlot == "binoculars" || _itemSlot == "primary_attachments" || _itemSlot == "secondary_attachments" ) then {
+			if ( _itemSlot == "uniform" || _itemSlot == "vest" || _itemSlot == "helmet" || _itemSlot == "goggles" || _itemSlot == "nightvision" || _itemSlot == "binoculars" || _itemSlot == "primary_attachments" || _itemSlot == "secondary_attachments"|| _itemSlot == "items" ) then {
 				_case addItemCargoGlobal [(_response select _i) select 1, 1];
 			};
 

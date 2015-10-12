@@ -1,109 +1,287 @@
 /*
-	File: getPlayerLoadout.sqf
 
-	Description:
-	Used to obtain all current weapons, items, and magazines to pass to Server for
-  persistence.
+	AUTHOR: aeroson
+	NAME: get_loadout.sqf
+	VERSION: 3.4
 
-	Parameter(s):
-  _this:	OBJECT	- Player Object that needs to be examined
+	DOWNLOAD & PARTICIPATE:
+	https://github.com/aeroson/a3-loadout
+	http://forums.bistudio.com/showthread.php?148577-GET-SET-Loadout-(saves-and-loads-pretty-much-everything)
 
-	Returns:
-	_this: Array -
-          0 - Player Information [0 - Name, 1 - UUID]
-          1 - Primary weapon
-          2 - Secondary weapon
-          3 - Handgun weapon
-          4 - Primary Attachments [0 - silencer, 1 - laser, 2 - optics, 3 - bipod]
-          5 - Secondary Attachments [0 - silencer, 1 - laser, 2 - optics, 3 - bipod]
-          6 - Handgun Attachments [0 - silencer, 1 - laser, 2 - optics, 3 - bipod]
-          7 - Headgear
-          8 - Goggles
-          9 - Uniform
-          10 - Vest
-          11 - Backpack
-          12 - Magazines [[0 - classname, 1 - ammo count], ... ]
-          13 - Items
-          14 - Assigned Items
-          15 - Misc
-          16 - Primary Weapon Current Magazines [0 - magazine type, 1 - ammo count]
-          17 - Secondary Weapon Current Magazine [0 - magazine type, 1 - ammo count]
-          18 - Handgun Weapon Current Magzine [0 - magazine type, 1 - ammo count]
+	DESCRIPTION:
+	I guarantee backwards compatibility.
+	These scripts allows you set/get (load/save)all of the unit's gear, including:
+	uniform, vest, backpack, contents of it, all quiped items, all three weapons with their attachments, currently loaded magazines and number of ammo in magazines.
+	All this while preserving order of items.
+	Useful for saving/loading loadouts.
+	Ideal for revive scripts where you have to set exactly the same loadout to newly created unit.
+	Uses workaround with placeholders to add vest/backpack items, so items stay where you put them.
+
+	PARAMETER(S):
+	0 : target unit
+	1 : (optional) array of options, default [] :
+		"ammo" will save ammo count of partially emptied magazines
+		"repetitive" intended for repetitive use, will not use selectWeapon, means no visible effect on solder, but will not save magazines of assigned items such as laser designator batteries
+
+	RETURNS:
+  Player UUID
+	Array : array of strings/arrays containing target unit's loadout, to be used by fnc_set_loadout.sqf
+
+	addAction support:
+	Saves player's loadout into global var loadout
+
 */
 
+private ["_target","_options","_saveMagsAmmo","_isRepetitive","_isOnFoot","_currentWeapon","_currentMode","_isFlashlightOn","_isIRLaserOn","_magazinesAmmo","_loadedMagazines","_saveWeaponMagazines","_getMagsAmmo","_backPackItems","_assignedItems","_data"];
+
+_options = ["ammo"];
+
+
+
+// addAction support
+if(count _this < 4) then {
+	#define PARAM_START private ["_PARAM_INDEX"]; _PARAM_INDEX=0;
+	#define PARAM_REQ(A) if (count _this <= _PARAM_INDEX) exitWith { systemChat format["required param '%1' not supplied in file:'%2' at line:%3", #A ,__FILE__,__LINE__]; }; A = _this select _PARAM_INDEX; _PARAM_INDEX=_PARAM_INDEX+1;
+	#define PARAM(A,B) A = B; if (count _this > _PARAM_INDEX) then { A = _this select _PARAM_INDEX; }; _PARAM_INDEX=_PARAM_INDEX+1;
+	PARAM_START
+	PARAM_REQ(_target)
+	PARAM(_options,[])
+} else {
+	_target = player;
+};
 
 // Establish Player Information
 _player = _this select 0;
 _playerName = name _player;
 _playerUUID = getPlayerUID _player;
 
-if (debugEnabled == 1) then {
-    hint format["%1 %2",_player,_playerUUID];
+_saveMagsAmmo = "ammo" in _options;
+_isRepetitive = "repetitive" in _options;
+_isOnFoot = vehicle _target == _target;
+
+_currentWeapon = "";
+_currentMode = "";
+_isFlashlightOn = false;
+_isIRLaserOn = false;
+
+_magazinesAmmo = magazinesAmmoFull _target;
+
+// save weapon mode and muzzle
+if(_isOnFoot) then {
+	_currentWeapon = currentMuzzle _target;
+	_currentMode = currentWeaponMode _target;
+	_isFlashlightOn = _target isFlashlightOn _currentWeapon;
+	_isIRLaserOn = _target isIRLaserOn _currentWeapon;
+} else {
+	_currentWeapon = currentWeapon _target;
+};
+
+
+_loadedMagazines=[];
+
+// universal weapon saving
+_saveWeaponMagazines = {
+	private ["_weapon","_magazines","_muzzles","_saveMagazine"];
+	_weapon = _this select 0;
+	_magazines = [];
+
+	_saveMagazine = { // find, save and eat mag for _weapon
+		private ["_weapon","_magazine","_ammo"];
+		_weapon = _this select 0;
+		_magazine = "";
+		_ammo = 0;
+		{
+			if((_x select 4)==_weapon) then {
+				_magazine = _x select 0;
+				_ammo = _x select 1;
+				_x = -1;
+			};
+		} forEach _magazinesAmmo;
+		_magazinesAmmo = _magazinesAmmo - [-1];
+		if(_magazine!="") then {
+			if(_saveMagsAmmo) then {
+				_magazines set [count _magazines, [_magazine, _ammo]];
+			} else {
+				_magazines set [count _magazines, _magazine];
+			};
+		};
+	};
+
+	if(_weapon != "") then {
+		[_weapon] call _saveMagazine;
+		_muzzles = configFile>>"CfgWeapons">>_weapon>>"muzzles";
+		if(isArray(_muzzles)) then {
+			{ // add one mag for each muzzle
+				if (_x != "this") then {
+					[_x] call _saveMagazine;
+				};
+			} forEach getArray(_muzzles);
+		};
+	};
+
+	_loadedMagazines set [count _loadedMagazines, _magazines];
+};
+
+// save loaded mags for each weapon separetely, since some weapons can use same magazines
+[primaryWeapon _target] call _saveWeaponMagazines;
+[handgunWeapon _target] call _saveWeaponMagazines;
+[secondaryWeapon _target] call _saveWeaponMagazines;
+
+_getMagsAmmo = { // default function with _saveMagsAmmo == false
+	_this select 0;
+};
+if(_saveMagsAmmo) then {
+	// check if input array contains magazine, if it does, find it add ammo count
+	_getMagsAmmo = {
+		private ["_items","_location","_item","_itemIndex"];
+		_items = _this select 0;
+		_location = _this select 1;
+		{
+			_item = _x;
+			_itemIndex = _forEachIndex;
+			{
+				if((_x select 4)==_location && (_x select 0)==_item) then {
+					_items set[_itemIndex, [_item, _x select 1]];
+					_x = -1;
+				};
+			} forEach _magazinesAmmo;
+			_magazinesAmmo = _magazinesAmmo - [-1];
+		} forEach _items;
+		_items;
+	};
+
+};
+
+// get backpack items
+_cargo = getbackpackcargo (unitbackpack _target);
+_backpacks = [];
+{
+	for "_i" from 1 to ((_cargo select 1) select _foreachindex) do {
+		_backpacks set [count _backpacks, _x];
+	};
+} foreach (_cargo select 0);
+_backPackItems = (backpackitems _target) + _backpacks;
+
+// get assigned items, headgear and goggles is not part of assignedItems
+_assignedItems = assignedItems _target;
+_headgear = headgear _target;
+_goggles = goggles _target;
+if((_headgear != "") && !(_headgear in _assignedItems)) then {
+	_assignedItems set [count _assignedItems, _headgear];
+};
+if((_goggles != "") && !(_goggles in _assignedItems)) then {
+	_assignedItems set [count _assignedItems, _goggles];
 };
 
 
 
-// Call all relevant information functions for loadout
-//Weapons
+/*
+// use this once magazinesAmmoFull is fixed and shows magazines of assignedItems
 
-_weapons = weapons _player;
+// get magazines of everything else except weapons, most likely assigned items
+// only ["Uniform","Vest","Backpack"] locations remain, weapon locations have already been eaten
+_magazines = [];
+{
+	if(_x select 2) then {
+		if(_saveMagsAmmo) then {
+			_magazines set[count _magazines, [_x select 0, _x select 1]];
+		} else {
+			_magazines set[count _magazines, _x select 0];
+		};
+		_x = -1;
+	};
+} forEach _magazinesAmmo;
+_magazinesAmmo = _magazinesAmmo - [-1];
+_loadedMagazines set [3, _magazines];
+*/
 
-_primaryWeapon = primaryWeapon _player;
 
-_primaryAttachments = primaryWeaponItems _player;
-_handgunWeapon = handgunWeapon _player;
-_handgunAttachments =  handgunItems _player;
-_secondaryWeapon = secondaryWeapon _player;
-_secondaryAttachments = secondaryWeaponItems _player;
+// old method using selectWeapon, cycles and tries to selectWeapon all assigned items
+if(!_isRepetitive) then {
+	private ["_weaponHasChanged"];
+	_weaponHasChanged = false;
 
-// Uniform
-_headgear = headgear _player;
-_goggles = goggles _player;
-_uniform = uniform _player;
-_vest = vest _player;
-_backpack = backpack _player;
+	// get magazines of all assigned items
+	_magazines = [];
+	{
+		_target selectWeapon _x;
+		if(currentWeapon _target==_x) then {
+			_weaponHasChanged = true;
+			_magazine = currentMagazine _target;
+			if(_magazine != "") then {
+				if(_saveMagsAmmo) then {
+					_magazines set[count _magazines, [_magazine, _target ammo _x]];
+				} else {
+					_magazines set[count _magazines, _magazine];
+				};
+			};
+		};
+	} forEach _assignedItems;
+	_loadedMagazines set [3, _magazines];
+
+	// select back originaly selected weapon and mode, only if weapon has changed
+	if(_weaponHasChanged) then {
+		if(_isOnFoot) then {
+			if(_currentWeapon != "" && _currentMode != "") then {
+				_muzzles = 0;
+				while{ (_currentWeapon != currentMuzzle _target || _currentMode != currentWeaponMode _target ) && _muzzles < 200 } do {
+					_target action ["SWITCHWEAPON", _target, _target, _muzzles];
+					_muzzles = _muzzles + 1;
+				};
+				if(_isFlashlightOn) then {
+					_target action ["GunLightOn"];
+				} else {
+					_target action ["GunLightOff"];
+				};
+				if(_isIRLaserOn) then {
+					_target action ["IRLaserOn"];
+				} else {
+					_target action ["IRLaserOff"];
+				};
+			};
+		} else {
+			_currentMode = "";
+		};
+		if(_currentMode == "") then {
+			if(_currentWeapon=="") then {
+				_target action ["SWITCHWEAPON", _target, _target, 0];
+			} else {
+				_target selectWeapon _currentWeapon;
+			};
+		};
+	};
+};
 
 
-//Held Magazine
-_magazines = magazinesAmmo _player;
-_primaryMagazineType = primaryWeaponMagazine _player;
-_primaryMagazineAmmo = _player ammo _primaryWeapon;
-_secondaryMagazineType = secondaryWeaponMagazine _player;
-_secondaryMagazineAmmo = _player ammo _secondaryWeapon;
-_handgunMagazineType = handgunMagazine _player;
-_handgunMagazineAmmo = _player ammo _handgunWeapon;
+_data = [
+	_assignedItems, //0 []
 
-//Items
-_assignedItems = assignedItems _player;
-_items = items _player;
+	primaryWeapon _target, //1 ""
+	primaryWeaponItems _target, //2 []
 
-//House Keeping
-_misc = _weapons - [_primaryWeapon,_secondaryWeapon,_handgunWeapon];
-_primaryMag = _primaryMagazineType+[_primaryMagazineAmmo];
-_secondaryMag = _secondaryMagazineType+[_secondaryMagazineAmmo];
-_handgunMag = _handgunMagazineType+[_handgunMagazineAmmo];
+	handgunWeapon _target, //3 ""
+	handgunItems _target, //4 []
 
-// Return Loadout
-_playerLoadout = [[_playerName,_playerUUID],
-				_primaryWeapon,
-				_secondaryWeapon,
-				_handgunWeapon,
-				_primaryAttachments,
-				_secondaryAttachments,
-				_handgunAttachments,
-				_headgear,
-				_goggles,
-				_uniform,
-				_vest,
-				_backpack,
-				_magazines,
-				_items,
-				_assignedItems,
-				_misc,
-				_primaryMag,
-				_secondaryMag,
-				_handgunMag
+	secondaryWeapon _target, //5 ""
+	secondaryWeaponItems _target, //6 []
+
+	uniform _target, //7 ""
+	[uniformItems _target, "Uniform"] call _getMagsAmmo, //8 ["magazine without ammo count",["magazine with ammo count",30], ....]
+
+	vest _target, //9 ""
+	[vestItems _target, "Vest"] call _getMagsAmmo, //10
+
+	backpack _target, //11  ""
+	[_backPackItems, "Backpack"] call _getMagsAmmo, //12
+
+	_loadedMagazines, //13 (optional) [[primary mags],[handgun mags],[secondary mags],[other mags]]
+	_currentWeapon, //14 (optional) ""
+	_currentMode //15 (optional) ""
 ];
 
 // Call Function on Server by sending it the neccessary information
-[_playerLoadout] remoteExecCall ["rrf_fnc_persistence_player_serverStoreLoadout", 2];
+[_playerUUID,_data] remoteExecCall ["rrf_fnc_persistence_player_serverStoreLoadout", 2];
+
+if (debugEnabled == 0) then {
+    hint format['%1 | %2',_playerUUID,_data];
+};
