@@ -42,7 +42,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework Test 14";
+		briefingName="1st RRF - Framework Test 15";
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;

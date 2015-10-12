@@ -16,11 +16,21 @@ _player = _this select 0;
 _playerUUID = getPlayerUID _player;
 _ownerID = owner _player;
 
+//Fusion Code to Pull and store information
+[[_playerUUID,_player,_ownerID]] spawn {
 
+        private["_method", "_response", "_params"];
+        _perms = _this select 0;
+        _uuid = _perms select 0;
+				_player = _perms select 1;
+				_ownerID = _perms select 2;
 
-//Fusion Code to Pull and store information REMEMBER TO PHARSE THE FUCKING OWNER ID
-//_positionArray = []; // Should be last thing done as this needs to return null if no information is stored
+        _method = "RESTORE_PLAYER_POSITION";
+        _params = [_uuid];
+        _response = [_method, _params] call sock_rpc;
+	       _positionArray = _response;
 
-//Fusion will need to return this null for no value found
+	//Fusion will need to return a null for no value found
+	    [_player,_positionArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerPosition",_ownerID];
 
-    [_player,_positionArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerPosition",_ownerID];
+};
