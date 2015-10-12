@@ -8,21 +8,23 @@
 
 	Parameter(s):
   _this:	Object - Player who needs to have loadout Restored
-					Number - Owner Number used to execute code remotely
 
 	Returns: Nothing
 */
 
 _player = _this select 0;
 _playerUUID = getPlayerUID _player;
-_ownerID = _this select 1;
+_ownerID = owner _player;
+
 
 //Fusion Code to Pull and store information
-[[_playerUUID]] spawn {
+[[_playerUUID,_player,_ownerID]] spawn {
 
         private["_method", "_response", "_params"];
         _perms = _this select 0;
         _uuid = _perms select 0;
+				_player = _perms select 1;
+				_ownerID = _perms select 2;
 
         _method = "RESTORE_PLAYER_EQUIPMENT";
         _params = [_uuid];
@@ -30,11 +32,6 @@ _ownerID = _this select 1;
 	_loadoutArray = _response;
 
 	//Fusion will need to return a null for no value found
-	if (!isNil "_loadoutArray") then {
-	    [_player,_loadoutArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID];
-	} else {
-	  if (debugEnabled == 1) then {
-	      hint "Null Value -> no loadout selected";
-	  };
-	};
+	    [_player,_loadoutArray,["ammo"]] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID];
+
 };
