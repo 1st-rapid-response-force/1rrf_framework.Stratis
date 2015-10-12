@@ -12,7 +12,7 @@
 	Returns: Nothing
 */
 
-_uuid = _this select 0
+_uuid = _this select 0;
 _loadout = _this select 1;
 
 [[_uuid, _loadout]] spawn {

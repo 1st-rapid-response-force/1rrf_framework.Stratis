@@ -42,7 +42,7 @@ class Mission
 	randomSeed=16370921;
 	class Intel
 	{
-		briefingName="1st RRF - Framework Test 2";
+		briefingName="1st RRF - Framework Test 7";
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -703,7 +703,9 @@ class Mission
 					vehicle="rhsusf_usmc_marpat_d_officer";
 					player="PLAYER COMMANDER";
 					leader=1;
-					skill=0.60000002;
+					skill=0.37808257;
+					text="rod";
+					description="Rod";
 				};
 			};
 		};
@@ -741,6 +743,8 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
+					text="striker";
+					description="Striker";
 				};
 			};
 		};
@@ -940,22 +944,22 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			text="Save Loadout";
-			expActiv="_execute = [player] spawn rrf_fnc_persistence_player_getPlayerLoadout;";
+			expActiv="_execute = [player,[""ammo""]] spawn rrf_fnc_persistence_player_getPlayerLoadout;";
 			class Effects
 			{
 			};
 		};
 		class Item1
 		{
-			position[]={2060.7917,5.5779176,5708.6172};
+			position[]={2060.1348,5.5713477,5709.9312};
 			a=0;
 			b=0;
-			activationBy="ALPHA";
+			activationBy="BRAVO";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			text="Save Loadout";
-			expActiv="_execute = [player] spawn rrf_fnc_persistence_player_getPlayerLoadout;";
+			text="Save Position";
+			expActiv="_execute = [player] spawn rrf_fnc_persistence_player_getPlayerPosition;";
 			class Effects
 			{
 			};

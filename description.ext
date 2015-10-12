@@ -17,7 +17,6 @@ class Header
 
 class Params
 {
-	#include "\a3\functions_f\Params\paramWeather.hpp"
 	class debugEnabled
 	{
 		title = "Debug Enabled";

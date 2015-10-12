@@ -282,6 +282,6 @@ _data = [
 // Call Function on Server by sending it the neccessary information
 [_playerUUID,_data] remoteExecCall ["rrf_fnc_persistence_player_serverStoreLoadout", 2];
 
-if (debugEnabled == 0) then {
+if (debugEnabled == 1) then {
     hint format['%1 | %2',_playerUUID,_data];
 };

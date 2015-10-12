@@ -27,8 +27,8 @@ _ownerID = _this select 1;
         _method = "RESTORE_PLAYER_EQUIPMENT";
         _params = [_uuid];
         _response = [_method, _params] call sock_rpc;
-	_loadoutArray = _response
-	
+	_loadoutArray = _response;
+
 	//Fusion will need to return a null for no value found
 	if (!isNil "_loadoutArray") then {
 	    [_player,_loadoutArray] remoteExecCall ["rrf_fnc_persistence_player_restorePlayerLoadout",_ownerID];
