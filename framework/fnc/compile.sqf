@@ -16,6 +16,11 @@ if (isServer) then {
     rrf_fnc_persistence_player_serverStorePosition =  compile preprocessFile 'framework\fnc\persistence\player\serverStorePosition.sqf';
     rrf_fnc_persistence_player_serverRestoreLoadout =  compile preprocessFile 'framework\fnc\persistence\player\serverRestoreLoadout.sqf';
     rrf_fnc_persistence_player_serverRestorePosition =  compile preprocessFile 'framework\fnc\persistence\player\serverRestorePosition.sqf';
+    rrf_fnc_persistence_medical_serverStoreMedical =  compile preprocessFile 'framework\fnc\persistence\medical\serverStoreMedical.sqf';
+    rrf_fnc_persistence_medical_serverRestoreMedical =  compile preprocessFile 'framework\fnc\persistence\medical\serverRestoreMedical.sqf';
+
+
+    rrf_fnc_persistence_medical_serverACEMedicalStore
   };
 
   rrf_fnc_analytics_analyticEvent = compile preprocessFile "framework\fnc\analytic\analyticEvent.sqf";
@@ -41,6 +46,8 @@ if (rrfPersistence == 1) then {
   rrf_fnc_persistence_player_restorePlayerLoadout =  compile preprocessfilelinenumbers 'framework\fnc\persistence\player\restorePlayerLoadout.sqf';
   rrf_fnc_persistence_player_getPlayerPosition =  compile preprocessfilelinenumbers 'framework\fnc\persistence\player\getPlayerPosition.sqf';
   rrf_fnc_persistence_player_restorePlayerPosition =  compile preprocessfilelinenumbers 'framework\fnc\persistence\player\restorePlayerPosition.sqf';
+  rrf_fnc_persistence_medical_getPlayerMedical =  compile preprocessfilelinenumbers 'framework\fnc\persistence\medical\getACEMedicalStatus.sqf';
+  rrf_fnc_persistence_medical_restorePlayerMedical =  compile preprocessfilelinenumbers 'framework\fnc\persistence\medical\restoreACEMedicalStatus.sqf';
 };
 
 

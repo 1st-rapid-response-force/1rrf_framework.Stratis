@@ -17,7 +17,7 @@
 _player = _this select 0;
 _playerName = name _player;
 _playerUUID = getPlayerUID _player;
-_position = position _player;
+_position = getPosASL player;
 _positionArray = [_playerUUID,_position];
 
 
