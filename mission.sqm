@@ -81,7 +81,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=46;
+		items=61;
 		class Item0
 		{
 			side="LOGIC";
@@ -2617,6 +2617,571 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="JURY 3-B-3 - Air Assault Infantry Rifleman";
+				};
+			};
+		};
+		class Item46
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1842.871,5.5,5684.7251};
+					id=147;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LANDSLIDE 1-7 - Logistics Team Leader";
+				};
+				class Item1
+				{
+					position[]={1841.7706,5.5,5683.918};
+					id=148;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 1-1 - Infantry Support Specialist";
+				};
+				class Item2
+				{
+					position[]={1843.7501,5.5,5683.98};
+					id=149;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 1-2 - Infantry Support Specialist";
+				};
+				class Item3
+				{
+					position[]={1842.7599,5.5,5683.4229};
+					id=150;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 1-3 - Vehicle Support Specialist";
+				};
+			};
+		};
+		class Item47
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1848.4752,5.5,5684.7861};
+					id=151;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LANDSLIDE 2-7 - Logistics Team Leader";
+				};
+				class Item1
+				{
+					position[]={1847.3749,5.5,5683.979};
+					id=152;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 2-1 - Infantry Support Specialist";
+				};
+				class Item2
+				{
+					position[]={1849.3544,5.5,5684.041};
+					id=153;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 2-2 - Infantry Support Specialist";
+				};
+				class Item3
+				{
+					position[]={1848.3641,5.5,5683.4839};
+					id=154;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LANDSLIDE 2-3 - Vehicle Support Specialist";
+				};
+			};
+		};
+		class Item48
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1844.2249,5.5,5710.7095};
+					id=155;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_uav";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="GIANT KILLER - Air Traffic Control Specialist";
+				};
+				class Item1
+				{
+					position[]={1845.0913,5.5,5710.7095};
+					id=156;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_uav";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="GIANT KILLER - Air Traffic Control Specialist";
+				};
+			};
+		};
+		class Item49
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1844.2465,5.5,5709.6831};
+					id=157;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="PILGRIM 1-7 - AIRCRAFT LOGISTICS SERGEANT";
+				};
+				class Item1
+				{
+					position[]={1845.2911,5.5,5709.6108};
+					id=158;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_engineer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PILGRIM 1-1 - AIRCRAFT LOGISTICS SPECIALIST";
+				};
+			};
+		};
+		class Item50
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1844.251,5.5,5706.9209};
+					id=159;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="WARLOCK 1-A - AH-64 Pilot";
+				};
+				class Item1
+				{
+					position[]={1845.2435,5.5,5706.5645};
+					id=160;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helicrew";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WARLOCK 1-B - AH-64 Gunner";
+				};
+			};
+		};
+		class Item51
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1844.0879,5.5,5705.7666};
+					id=161;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="WARLOCK 2-A - AH-64 Pilot";
+				};
+				class Item1
+				{
+					position[]={1845.0804,5.5,5705.4102};
+					id=162;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helicrew";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WARLOCK 2-B - AH-64 Gunner";
+				};
+			};
+		};
+		class Item52
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1844.0754,5.5,5704.4199};
+					id=163;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="WINGMAN 1-A - Fixed Wing Transport Pilot";
+				};
+				class Item1
+				{
+					position[]={1845.3168,5.5,5703.9551};
+					id=164;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WINGMAN 1-A - Fixed Wing Transport Co-Pilot";
+				};
+				class Item2
+				{
+					position[]={1846.4545,5.5,5703.5933};
+					id=165;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WINGMAN 1-A - Fixed Wing Transport Loadmaster";
+				};
+			};
+		};
+		class Item53
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1844.1089,5.5,5703.1865};
+					id=166;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="WHISTLER 1-A - Rotary Transport Pilot";
+				};
+				class Item1
+				{
+					position[]={1845.0605,5.5,5702.9487};
+					id=167;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 1-B - Rotary Transport Co-Pilot";
+				};
+				class Item2
+				{
+					position[]={1844.9778,5.5,5702.4214};
+					id=168;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helicrew";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 1-C - Rotary Transport Weapons Specialist";
+				};
+				class Item3
+				{
+					position[]={1844.0573,5.5,5702.4414};
+					id=169;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 1 WHISKEY - Rotary Transport Flight Medic";
+				};
+			};
+		};
+		class Item54
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1843.902,5.5,5701.6245};
+					id=170;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="WHISTLER 2-A - Rotary Transport Pilot";
+				};
+				class Item1
+				{
+					position[]={1844.8536,5.5,5701.3867};
+					id=171;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 2-B - Rotary Transport Co-Pilot";
+				};
+				class Item2
+				{
+					position[]={1844.7709,5.5,5700.8594};
+					id=172;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helicrew";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 2-C - Rotary Transport Weapons Specialist";
+				};
+				class Item3
+				{
+					position[]={1843.8503,5.5,5700.8794};
+					id=173;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="WHISTLER 2 WHISKEY - Rotary Transport Flight Medic";
+				};
+			};
+		};
+		class Item55
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1843.8052,5.5,5699.7412};
+					id=174;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="ROGUE 1 - Fixed Wing Attack Aircraft Pilot";
+				};
+			};
+		};
+		class Item56
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1844.7878,5.5,5699.7202};
+					id=175;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_helipilot";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="ROGUE 2 - Fixed Wing Attack Aircraft Pilot";
+				};
+			};
+		};
+		class Item57
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1838.6189,5.5,5674.6387};
+					id=176;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HAILSTORM 1-7 - Artillery Battery Commander";
+				};
+				class Item1
+				{
+					position[]={1838.5465,5.5,5673.6045};
+					id=177;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HAILSTORM 1-1 - Artillery Battery Gunner";
+				};
+				class Item2
+				{
+					position[]={1839.345,5.5,5673.8584};
+					id=178;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HAILSTORM 1-2 - Artillery Battery Communication Specialist";
+				};
+			};
+		};
+		class Item58
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1843.0562,5.5,5674.6289};
+					id=179;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HAILSTORM 2-7 - Artillery Battery Commander";
+				};
+				class Item1
+				{
+					position[]={1842.9838,5.5,5673.5947};
+					id=180;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HAILSTORM 2-1 - Artillery Battery Gunner";
+				};
+				class Item2
+				{
+					position[]={1843.7822,5.5,5673.8486};
+					id=181;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HAILSTORM 2-2 - Artillery Battery Communication Specialist";
+				};
+			};
+		};
+		class Item59
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1846.5946,5.5,5680.4004};
+					id=182;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_sniper";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="RAVEN 7 - Special Operations Reconnaisance Leader";
+				};
+				class Item1
+				{
+					position[]={1847.7805,5.5,5680.415};
+					id=183;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_sniper";
+					player="PLAY CDG";
+					skill=0.61000001;
+					description="RAVEN 1 - Special Operations Reconnaisance Sniper";
+				};
+			};
+		};
+		class Item60
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={1846.603,5.5,5679.3779};
+					id=184;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="PARAGON 6 - Special Operations Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1846.9541,5.5,5678.8613};
+					id=185;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PARAGON 7 - Special Operations NCOIC";
+				};
+				class Item2
+				{
+					position[]={1848.04,5.5,5678.8716};
+					id=186;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PARAGON 1 - Special Operations Sergeant";
+				};
+				class Item3
+				{
+					position[]={1848.8987,5.5,5678.8613};
+					id=187;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PARAGON 2 - Special Operations Sergeant";
+				};
+				class Item4
+				{
+					position[]={1849.9537,5.5,5678.8403};
+					id=188;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PARAGON 3 - Special Operations Medical Sergeant";
+				};
+				class Item5
+				{
+					position[]={1850.9158,5.5,5678.9854};
+					id=189;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="PARAGON 4 - Special Operations Communication Sergeant";
 				};
 			};
 		};
