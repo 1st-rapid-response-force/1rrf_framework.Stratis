@@ -29,7 +29,8 @@ class Mission
 		"ace_repair",
 		"ace_viewdistance",
 		"ace_vehiclelock",
-		"ace_nametags"
+		"ace_nametags",
+		"A3_Data_F_Curator_Characters"
 	};
 	addOnsAuto[]=
 	{
@@ -80,7 +81,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=23;
+		items=46;
 		class Item0
 		{
 			side="LOGIC";
@@ -1194,6 +1195,1428 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+				};
+			};
+		};
+		class Item23
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1841.8539,5.5,5718.1313};
+					id=26;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					description="ODIN 6 - Unit Commander";
+				};
+				class Item1
+				{
+					position[]={1840.5168,5.5,5716.6094};
+					special="NONE";
+					id=27;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="THOR 6 - Theatre Commander";
+				};
+			};
+		};
+		class Item24
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1837.5272,5.5,5713.7656};
+					special="NONE";
+					id=28;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LOKI 6 - S2 OIC";
+				};
+				class Item1
+				{
+					position[]={1838.5642,5.5,5713.0313};
+					special="NONE";
+					id=29;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LOKI 2 - S2 Intelligence Officer";
+				};
+				class Item2
+				{
+					position[]={1836.4741,5.5,5712.874};
+					special="NONE";
+					id=30;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_fso";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LOKI 1 - S2 Intelligence Officer";
+				};
+			};
+		};
+		class Item25
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1846.4104,5.5,5714.3076};
+					id=31;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="SHADE 6 - S3 OIC";
+				};
+				class Item1
+				{
+					position[]={1845.7434,5.5,5713.501};
+					id=32;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="SHADE 1 - Simulations Operations Officer";
+				};
+				class Item2
+				{
+					position[]={1847.1085,5.5,5713.6719};
+					id=33;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="SHADE 2 - Simulations Operations Officer";
+				};
+			};
+		};
+		class Item26
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1829.7202,5.5,5709.6128};
+					id=34;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="VIKING 6 - Infantry Officer";
+				};
+				class Item1
+				{
+					position[]={1830.4651,5.5,5709.0063};
+					id=35;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING WHISKEY - Motorized Infantry Platoon Medic";
+				};
+			};
+		};
+		class Item27
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1825.0198,5.5,5707.5615};
+					id=36;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="VIKING 1-7 - Motorized Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1823.9633,5.5,5706.8345};
+					id=37;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-A - Motorized Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1823.0057,5.5,5706.2217};
+					id=38;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-A-1 - Motorized Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1823.9368,5.5,5706.2627};
+					id=39;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-A-2 - Motorized Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1824.7642,5.5,5706.2837};
+					id=40;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-A-3 - Motorized Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1827.1075,5.5,5707.0415};
+					id=41;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-B - Motorized Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1826.15,5.5,5706.4287};
+					id=42;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-B-1 - Motorized Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1827.0811,5.5,5706.4697};
+					id=43;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-B-2 - Motorized Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1827.9084,5.5,5706.4907};
+					id=44;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 1-B-3 - Motorized Infantry Rifleman";
+				};
+			};
+		};
+		class Item28
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1833.9791,5.5,5707.9844};
+					id=45;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="VIKING 2-7 - Motorized Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1832.9226,5.5,5707.2573};
+					id=46;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-A - Motorized Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1831.9651,5.5,5706.6445};
+					id=47;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-A-1 - Motorized Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1832.8961,5.5,5706.6855};
+					id=48;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-A-2 - Motorized Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1833.7235,5.5,5706.7065};
+					id=49;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-A-3 - Motorized Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1836.0669,5.5,5707.4644};
+					id=50;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-B - Motorized Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1835.1094,5.5,5706.8516};
+					id=51;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-B-1 - Motorized Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1836.0404,5.5,5706.8926};
+					id=52;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-B-2 - Motorized Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1836.8678,5.5,5706.9136};
+					id=53;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="VIKING 2-B-3 - Motorized Infantry Rifleman";
+				};
+			};
+		};
+		class Item29
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1829.368,5.5,5695.3354};
+					id=54;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LONGBOAT 6 - Infantry Officer";
+				};
+				class Item1
+				{
+					position[]={1829.7549,5.5,5695.0068};
+					id=55;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT WHISKEY - Ampibious Infantry Platoon Medic";
+				};
+			};
+		};
+		class Item30
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1826.7592,5.5,5694.4507};
+					id=56;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LONGBOAT KILO 1-7 - IFV Commander";
+				};
+				class Item1
+				{
+					position[]={1826.0558,5.5,5693.8306};
+					id=57;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_driver";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT KILO 1-1 - IFV Driver";
+				};
+				class Item2
+				{
+					position[]={1827.3488,5.5,5693.8823};
+					id=58;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT KILO 1-2 - IFV Gunner";
+				};
+			};
+		};
+		class Item31
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1831.5286,5.5,5694.623};
+					id=59;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LONGBOAT KILO 2-7 - IFV Commander";
+				};
+				class Item1
+				{
+					position[]={1830.8252,5.5,5694.0029};
+					id=60;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_driver";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT KILO 2-1 - IFV Driver";
+				};
+				class Item2
+				{
+					position[]={1832.1182,5.5,5694.0547};
+					id=61;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT KILO 2-2 - IFV Gunner";
+				};
+			};
+		};
+		class Item32
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={1825.8533,5.5,5692.1689};
+					id=62;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LONGBOAT 1-7 - Amphibious Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1824.307,5.5,5691.1968};
+					id=63;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-A - Amphibious Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1823.3495,5.5,5690.584};
+					id=64;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-A-1 - Amphibious Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1824.2805,5.5,5690.625};
+					id=65;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-A-2 - Amphibious Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1827.4513,5.5,5691.4038};
+					id=66;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-B - Amphibious Infantry Team Leader";
+				};
+				class Item5
+				{
+					position[]={1827.4248,5.5,5690.832};
+					id=67;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-B-2 - Amphibious Infantry Rifleman";
+				};
+				class Item6
+				{
+					position[]={1828.2289,5.5,5690.8765};
+					id=68;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 1-B-3 - Amphibious Infantry Rifleman";
+				};
+			};
+		};
+		class Item33
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={1833.7799,5.5,5692.3662};
+					id=69;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="LONGBOAT 2-7 - Amphibious Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1832.2336,5.5,5691.394};
+					id=70;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-A - Amphibious Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1831.2761,5.5,5690.7813};
+					id=71;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-A-1 - Amphibious Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1832.2072,5.5,5690.8223};
+					id=72;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-A-2 - Amphibious Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1835.3779,5.5,5691.6011};
+					id=73;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-B - Amphibious Infantry Team Leader";
+				};
+				class Item5
+				{
+					position[]={1835.3514,5.5,5691.0293};
+					id=74;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-B-2 - Amphibious Infantry Rifleman";
+				};
+				class Item6
+				{
+					position[]={1836.1555,5.5,5691.0737};
+					id=75;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="LONGBOAT 2-B-3 - Amphibious Infantry Rifleman";
+				};
+			};
+		};
+		class Item34
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1829.4863,5.5,5701.3892};
+					id=76;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="ARROW 6 - Infantry Officer";
+				};
+				class Item1
+				{
+					position[]={1829.9409,5.5,5701.1719};
+					id=77;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW WHISKEY - Ampibious Infantry Platoon Medic";
+				};
+			};
+		};
+		class Item35
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1824.7859,5.5,5699.3379};
+					id=78;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="ARROW 1-7 - Air Assault Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1823.7294,5.5,5698.6108};
+					id=79;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-A - Air Assault Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1822.7719,5.5,5697.998};
+					id=80;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-A-1 - Air Assault Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1823.7029,5.5,5698.0391};
+					id=81;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-A-2 - Air Assault Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1824.5303,5.5,5698.0601};
+					id=82;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-A-3 - Air Assault Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1826.8737,5.5,5698.8179};
+					id=83;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-B - Air Assault Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1825.9161,5.5,5698.2051};
+					id=84;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-B-1 - Air Assault Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1826.8472,5.5,5698.2461};
+					id=85;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-B-2 - Air Assault Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1827.6746,5.5,5698.2671};
+					id=86;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 1-B-3 - Air Assault Infantry Rifleman";
+				};
+			};
+		};
+		class Item36
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1830.1406,5.5,5681.7832};
+					id=87;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="ARROW 2-7 - Air Assault Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1829.0841,5.5,5681.0562};
+					id=88;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-A - Air Assault Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1828.1266,5.5,5680.4434};
+					id=89;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-A-1 - Air Assault Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1829.0576,5.5,5680.4844};
+					id=90;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-A-2 - Air Assault Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1829.885,5.5,5680.5054};
+					id=91;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-A-3 - Air Assault Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1832.2284,5.5,5681.2632};
+					id=92;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-B - Air Assault Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1831.2709,5.5,5680.6504};
+					id=93;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-B-1 - Air Assault Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1832.2019,5.5,5680.6914};
+					id=94;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-B-2 - Air Assault Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1833.0293,5.5,5680.7124};
+					id=95;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="ARROW 2-B-3 - Air Assault Infantry Rifleman";
+				};
+			};
+		};
+		class Item37
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1849.6375,5.5,5696.0781};
+					id=96;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HITMAN 6 - Infantry Officer";
+				};
+				class Item1
+				{
+					position[]={1850.0243,5.5,5695.7495};
+					id=97;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN WHISKEY - Ampibious Infantry Platoon Medic";
+				};
+			};
+		};
+		class Item38
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1847.0286,5.5,5695.1934};
+					id=98;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HITMAN KILO 1-7 - IFV Commander";
+				};
+				class Item1
+				{
+					position[]={1846.3252,5.5,5694.5732};
+					id=99;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_driver";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN KILO 1-1 - IFV Driver";
+				};
+				class Item2
+				{
+					position[]={1847.6182,5.5,5694.625};
+					id=100;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN KILO 1-2 - IFV Gunner";
+				};
+			};
+		};
+		class Item39
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1851.798,5.5,5695.3657};
+					id=101;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HITMAN KILO 2-7 - IFV Commander";
+				};
+				class Item1
+				{
+					position[]={1851.0946,5.5,5694.7456};
+					id=102;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_driver";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN KILO 2-1 - IFV Driver";
+				};
+				class Item2
+				{
+					position[]={1852.3876,5.5,5694.7974};
+					id=103;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_crewman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN KILO 2-2 - IFV Gunner";
+				};
+			};
+		};
+		class Item40
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={1846.1227,5.5,5692.9116};
+					id=104;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HITMAN 1-7 - Amphibious Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1844.5764,5.5,5691.9395};
+					id=105;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-A - Amphibious Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1843.6189,5.5,5691.3267};
+					id=106;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-A-1 - Amphibious Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1844.5499,5.5,5691.3677};
+					id=107;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-A-2 - Amphibious Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1847.7207,5.5,5692.1465};
+					id=108;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-B - Amphibious Infantry Team Leader";
+				};
+				class Item5
+				{
+					position[]={1847.6942,5.5,5691.5747};
+					id=109;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-B-2 - Amphibious Infantry Rifleman";
+				};
+				class Item6
+				{
+					position[]={1848.4983,5.5,5691.6191};
+					id=110;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 1-B-3 - Amphibious Infantry Rifleman";
+				};
+			};
+		};
+		class Item41
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={1854.0493,5.5,5693.1089};
+					id=111;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="HITMAN 2-7 - Amphibious Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1852.5031,5.5,5692.1367};
+					id=112;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-A - Amphibious Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1851.5455,5.5,5691.5239};
+					id=113;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-A-1 - Amphibious Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1852.4766,5.5,5691.5649};
+					id=114;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-A-2 - Amphibious Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1855.6473,5.5,5692.3438};
+					id=115;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-B - Amphibious Infantry Team Leader";
+				};
+				class Item5
+				{
+					position[]={1855.6208,5.5,5691.772};
+					special="NONE";
+					id=116;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-B-2 - Amphibious Infantry Rifleman";
+				};
+				class Item6
+				{
+					position[]={1856.4249,5.5,5691.8164};
+					id=117;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="HITMAN 2-B-3 - Amphibious Infantry Rifleman";
+				};
+			};
+		};
+		class Item42
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1827.4766,5.5,5683.3481};
+					id=118;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_officer";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="JURY 6 - Infantry Officer";
+				};
+				class Item1
+				{
+					position[]={1827.9312,5.5,5683.1309};
+					id=119;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_medic";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY WHISKEY - Ampibious Infantry Platoon Medic";
+				};
+			};
+		};
+		class Item43
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1832.1504,5.5,5699.8242};
+					id=120;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="JURY 1-7 - Air Assault Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1831.0939,5.5,5699.0972};
+					id=121;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-A - Air Assault Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1830.1364,5.5,5698.4844};
+					id=122;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-A-1 - Air Assault Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1831.0674,5.5,5698.5254};
+					id=123;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-A-2 - Air Assault Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1831.8948,5.5,5698.5464};
+					id=124;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-A-3 - Air Assault Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1834.2382,5.5,5699.3042};
+					id=125;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-B - Air Assault Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1833.2806,5.5,5698.6914};
+					id=126;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-B-1 - Air Assault Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1834.2117,5.5,5698.7324};
+					id=127;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-B-2 - Air Assault Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1835.0391,5.5,5698.7534};
+					id=128;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 1-B-3 - Air Assault Infantry Rifleman";
+				};
+			};
+		};
+		class Item44
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1827.0479,5.5,5678.5557};
+					id=129;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="JURY 2-7 - Air Assault Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1825.9913,5.5,5677.8286};
+					id=130;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-A - Air Assault Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1825.0338,5.5,5677.2158};
+					id=131;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-A-1 - Air Assault Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1825.9648,5.5,5677.2568};
+					id=132;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-A-2 - Air Assault Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1826.7922,5.5,5677.2778};
+					id=133;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-A-3 - Air Assault Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1829.1356,5.5,5678.0356};
+					id=134;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-B - Air Assault Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1828.1781,5.5,5677.4229};
+					id=135;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-B-1 - Air Assault Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1829.1091,5.5,5677.4639};
+					id=136;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-B-2 - Air Assault Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1829.9365,5.5,5677.4849};
+					id=137;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 2-B-3 - Air Assault Infantry Rifleman";
+				};
+			};
+		};
+		class Item45
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={1823.4546,5.5,5681.4854};
+					id=138;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_squadleader";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					description="JURY 3-7 - Air Assault Infantry Squad Leader";
+				};
+				class Item1
+				{
+					position[]={1822.3981,5.5,5680.7583};
+					id=139;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-A - Air Assault Infantry Team Leader";
+				};
+				class Item2
+				{
+					position[]={1821.4406,5.5,5680.1455};
+					id=140;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-A-1 - Air Assault Infantry Rifleman";
+				};
+				class Item3
+				{
+					position[]={1822.3716,5.5,5680.1865};
+					id=141;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-A-2 - Air Assault Infantry Rifleman";
+				};
+				class Item4
+				{
+					position[]={1823.199,5.5,5680.2075};
+					id=142;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-A-3 - Air Assault Infantry Rifleman";
+				};
+				class Item5
+				{
+					position[]={1825.5424,5.5,5680.9653};
+					id=143;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_teamleader";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-B - Air Assault Infantry Team Leader";
+				};
+				class Item6
+				{
+					position[]={1824.5848,5.5,5680.3525};
+					id=144;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-B-1 - Air Assault Infantry Rifleman";
+				};
+				class Item7
+				{
+					position[]={1825.5159,5.5,5680.3936};
+					id=145;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-B-2 - Air Assault Infantry Rifleman";
+				};
+				class Item8
+				{
+					position[]={1826.3433,5.5,5680.4146};
+					id=146;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="JURY 3-B-3 - Air Assault Infantry Rifleman";
 				};
 			};
 		};
